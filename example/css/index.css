@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+* { margin:0; padding:0; list-style:none;}
+img{border:0;}
+em{font-style:normal}
+a{color:#5b5b5b; text-decoration:none;}
+a:hover{color:#a00000; text-decoration:none;}
+button{zoom:1;cursor:pointer;display:inline-block;border:0;}
+html { height:100%; overflow-x:hidden;overflow-y:auto;}
+body { overflow-x:hidden;overflow-y:auto; background:#fff;font-size:12px;color:#5b5b5b;font:12px/1.8 "宋体",Tahoma, Helvetica, Arial,  sans-serif;}
+.clearfix{clear:both;}
+#top{width:100%; height:47px;background:url(../images/menubg.gif) 0 0 repeat-x;}
+.topnavi{width:1000px;height:47px;margin:0 auto;}
+.navi{width:1000px;float:left;height:47px;}
+.menu{width:1000px;font:15px/1.8 "微软雅黑","黑体",Tahoma, Helvetica, Arial,  sans-serif;font-weight:bold; }
+.menu ul{width:1000px;float:left;margin:0 auto}
+
+.menu ul li{float:left;padding:0px 20px;height:43px;line-height:43px;}
+.menu ul li a{color:#fff;display:block;height:43px;line-height:43px;}
+.menu ul li:hover{background:#670000;}
+.menu>ul>li{float:left;padding:0px 10px 0px 10px;margin-left:30px;}
+.menu ul li ul{float:left;width:120px;position:absolute;margin:0px 0 0 -10px;background:#a00000;padding:5px 0;display:none;z-index:1000;}
+.menu ul li ul li{float:left;width:120px;padding:0;height:35px;line-height:35px;}
+.menu ul li ul li a{display:block;height:35px;line-height:35px;padding-left:25px;}
+.menu ul li ul li a:hover{background:#670000;color:#fff;}
+
+.menu ul li ul.sub2{width:240px;}
+.menu ul li ul.sub2 li{width:240px;}
+
+
+#topimg{width:100%; height:267px;background:url(../images/topbg.jpg) 0 0 repeat-x; text-align:center;}
+#content{width:1000px;margin:0 auto; text-align:center;padding:20px 0;}
+#footer{width:100%;height:45px;line-height:45px;text-align:center;background:#910000;color:#fff2a8;border-top:3px solid #ebad4c;font-weight:bold;}
+
+.box{border:1px solid #c6c6c6;}
+.newbox{border-left:1px solid #c6c6c6;border-right:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;}
+.rightbox{padding:5px 15px;}
+.left{width:240px;float:left;}
+.center{width:510px;float:left;margin-left:20px;}
+.right{width:210px;float:right;margin-left:20px;}
+
+.slider{height:300px;}
+.qbtn{display:block;width:258px;height:51px;background:url(../images/btn.gif) 0 0 no-repeat;margin-top:20px;}
+.btn1{background-position:0 0}
+.btn1:active{background-position:0 -51px}
+.btn2{background-position:0 -102px}
+.btn2:active{background-position:0 -153px}
+
+.more{background:url(../images/more.gif) 0 0 no-repeat;display:block;width:39px;height:18px;}
+.quickbtn a{margin-top:15px;display:block;width:240px;height:63px;}
+.quickbtn2 a{margin-top:20px;display:block;width:215px;height:95px;}
+
+.listcontent{text-align:left;margin:10px auto 0 auto;}
+.listcontent ul{line-height:27px;}
+.listcontent ul li{width:inherit;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-moz-text-overflow: ellipsis;-webkit-text-overflow: ellipsis;}
+.listcontent ul.borders li{border-bottom:1px dashed #a1a1a1}
+.listcontent ul li a{overflow:hidden;}
+.listcontent ul li span{float:right;width:auto;*width:120px;}
+
+.listtitle{border-bottom:3px solid #a00000;margin-bottom:10px;height:40px;}
+.listtitle span{float:right;margin-top:15px;}
+.listtitle h3{color:#a00000;height:40px;line-height:45px;padding-left:25px;float:left;padding-right:25px;font-size:14px;background:url(../images/icon4.gif) 0 15px no-repeat;}
+
+.listtitle2{height:55px;background:url(../images/title1.jpg) 0 0 no-repeat;}
+.listtitle2 span{float:left;width:100%;text-align:left;padding-left:15px;font-weight:bold;color:#3c3c3c;}
+.listtitle2 h3{color:#a00000;padding-left:15px;float:left;padding-right:25px;font-size:14px;margin-top:5px;}
+.listtitle2 h3 a{color:#a00000;}
+
+.listtitle3{height:55px;background:url(../images/title2.jpg) 0 0 no-repeat;}
+.listtitle3 span{float:left;width:100%;text-align:left;padding-left:15px;font-weight:bold;color:#3c3c3c;}
+.listtitle3 h3{color:#a00000;padding-left:15px;float:left;padding-right:25px;font-size:14px;margin-top:5px;}
+.listtitle3 h3 a{color:#a00000;}
+
+.catalog{text-align:left;margin:0 auto;padding:5px 0 10px 0;}
+.catalog ul{line-height:30px;}
+.catalog ul li{width:inherit;overflow:hidden;border-bottom:1px dashed #a1a1a1;white-space:nowrap;text-overflow:ellipsis;-moz-text-overflow: ellipsis;-webkit-text-overflow: ellipsis;padding-left:30px;background:url(../images/arrow.gif) 15px 10px no-repeat;font-size:14px;font-weight:bold;}
+
+.sub-listtitle{border-bottom:1px solid #c7c8c7;margin-bottom:10px;height:40px;}
+.sub-listtitle h3{color:#a00000;height:40px;line-height:40px;padding-left:35px;float:left;font-size:14px;background:url(../images/icon4.gif) 12px 12px no-repeat;}
+.sub-catalog{text-align:left;margin:10px auto 0 auto;padding:0px 15px 25px 15px;}
+.sub-catalog ul{line-height:30px;}
+.sub-catalog ul li{width:inherit;overflow:hidden;border-bottom:1px dashed #a1a1a1;white-space:nowrap;text-overflow:ellipsis;-moz-text-overflow: ellipsis;-webkit-text-overflow: ellipsis;padding-left:35px;background:url(../images/arrow.gif) 10px 10px no-repeat;}
+
+.sub-btn{text-align:left;margin:10px auto;padding:0px 15px;font-size:14px;line-height:40px;}
+.sub-btn li{padding-left:10px;height:40px;}
+.sub-btn li em{float:left;display:block;width:20px;height:20px;margin-top:10px;margin-right:18px;}
+.ico{background:url(../images/ico.gif) 0 0 no-repeat;}
+.ico2{background-position:0 -20px;}
+
+.sub-left{width:220px;float:left}
+.sub-right{width:750px;float:right;margin-left:20px;}
+.color{background:#fffef8}
+.sublist ul{line-height:30px;}
+.sublist ul li{border-bottom:1px dashed #a1a1a1;}
+.pagebar{width:100%;text-align:right;margin-top:20px;}
+
+.detail{text-align:left;}
+
+.anpager .cpb {background:#a00000 none repeat scroll 0 0;border:1px solid #860000;color:#FFFFFF;font-weight:bold;margin:2px;padding:3px 4px 3px 4px;}
+.anpager a {background:#FFFFFF none repeat scroll 0 0;border:1px solid #CCCCCC;color:#000;margin:2px;padding:3px 4px 3px 4px;text-decoration:none}
+.anpager a:hover{background:#a00000 none repeat scroll 0 0;border:1px solid #860000;color:#FFFFFF;}
+.attach{padding-left:20px;background:url(../images/attach.gif) left center no-repeat;height:25px;line-height:25px;}
+

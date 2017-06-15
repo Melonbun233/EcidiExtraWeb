@@ -1,0 +1,256 @@
+/*  Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  End of Reset CSS  */
+
+/*  Custom  */
+
+body {   
+  font: 300 16px/22px "微软雅黑", "宋体","Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif; 
+} 
+
+div {
+  display: block;
+}
+/*  Grid  */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container, .grid {
+  margin: 0 auto;
+  width : 1000px;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.col-1 {
+  width: 6.666666%;
+}
+.col-2 {
+  width: 13.333333%;
+}
+.col-3 {
+  width: 20%;
+}
+.col-4 {
+  width: 26.666666%;
+}
+.col-5 {
+  width: 33.333333%;
+}
+.col-6 {
+  width: 40%;
+}
+.col-7 {
+  width: 46.666666%；
+}
+.col-8 {
+  width: 53.333333%;
+}
+.col-9 {
+  width: 60%;
+}
+.col-10 {
+  width: 66.666666%;
+}
+.col-11 {
+  width: 73.333333%;
+}
+.col-12 {
+  width: 80%;
+}
+.col-13 {
+  width: 86.666666%;
+}
+.col-14 {
+  width: 93.333333%;
+}
+.col-15 {
+  width: 100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .grid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*  Clearfix  */
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+    Typography
+*/
+
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+
+h1, h2, h3, h4, {
+  color: #000;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: bold;
+}
+
+cite, em {
+  font-style: italic;
+}
+
+/*  Link  */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+
+}
+
+/*  Header  */
+
+.nav a {
+  color: #303030;
+  font-weight: 800;
+}
+.nav a:hover {
+  color: #6e6e6e;
+}
+
+.nav ul {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.nav li {
+  display: block;
+  padding: 5px 10px; 
+  text-align: center;
+
+}
+
+.primary-nav>ul>li {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: 16.666666%;
+  border-bottom: 1px solid #cfcfcf;
+}  
+
+
+.nav-dropdown-list {
+  display: none;
+  position: fixed;
+  padding: 5px 0;
+}
+
+/*
+.nav-dropdown:hover ul{
+  display: block;
+}
+*/
+
+.primary-nav .nav-dropdown-list li {
+  border-bottom: 1px solid #cfcfcf;
+  padding: 10px 0;
+  display: block;
+  width: 135px;
+}
+
+
+/*  Aside Navagation  */
+
+.aside-nav {
+  padding: 100px 0 100px 0;
+}
+
