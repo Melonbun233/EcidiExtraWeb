@@ -53,6 +53,7 @@ table {
 
 body {   
   font: 300 16px/22px "微软雅黑", "宋体","Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif; 
+  background-color: #0099cc;
 } 
 
 div {
@@ -153,9 +154,13 @@ h1, h2, h3, h4, {
   color: #000;
 }
 
+p {
+  text-indent: 2em;
+  font-size: 14px;
+}
 h1 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 38px;
+  line-height: 48px;
 }
 
 h2 {
@@ -164,8 +169,8 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
-  line-height: 26px
+  font-size: 18px;
+  line-height: 34px;px;
 }
 
 h4 {
@@ -186,16 +191,20 @@ cite, em {
   font-style: italic;
 }
 
+small {
+  color: black;
+  font-size: 8px;
+}
+
 /*  Link  */
 
 a {
   text-decoration: none;
-  color: #303030;
+  color: #fff;
 
 }
 
 a:hover {
-  color: #6e6e6e;
 }
 
 /*  Navagation  */
@@ -211,6 +220,9 @@ a:hover {
   text-align: center;
 }
 
+.nav-dropdown {
+  position: relative;
+}
 .nav-dropdown-list {
   display: none;
   position: absolute;
@@ -223,16 +235,29 @@ a:hover {
 .nav-dropdown-list li {
   padding: 10px 0;
   display: block;
-  background-color: #fff;
+  background-color: #0099cc;
   vertical-align: text-top;
 }
 
 /*  Header  */
+
+#topimg h1 {
+  padding: 30px 0 10px 0;
+}
+
+#topimg h2 {
+  padding:15px 0;
+}
+
 #menu {
    border-bottom: 2px solid #cfcfcf;
 }
 #header {
   padding:0;
+}
+
+.primary-nav {
+  float: right;
 }
 .primary-nav>li {
   display: inline-block;
@@ -244,15 +269,13 @@ a:hover {
 .primary-nav>li:hover {
   border-left: 1px solid #cfcfcf;
   border-right: 1px solid #cfcfcf;
+  background-color: #999; 
 }
 
 .primary-nav .nav-dropdown-list {
-  width: 110px;
-  margin-left: 18.333333px;
-}
-
-.primary-nav .nav-dropdown-list {
-  padding-top: 10px;
+  width: 163.333333px;
+  left: -1px;
+  top: 43px;
 }
 
 /*
@@ -261,56 +284,66 @@ a:hover {
 }
 */
 
-.primary-nav .nav-dropdown-list li {
-  border-bottom: 1px solid #cfcfcf;
-}
 .primary-nav .nav-dropdown-list li:first-child {
-  background: none;
-  padding-top: 20px;
+  border-top: 1px solid #cfcfcf;
 }
+.primary-nav .nav-dropdown-list li:hover{
+  background-color: #999; 
+}
+
 
 /*  Content   */
 
 #content {
   padding: 20px 0;
+  background-color: #fff;
 }
 
+/*  Footer  */
+
+#footer {
+  text-align: center;
+}
 /*  Aside Navagation  */
 
 #aside {
   float: left;
+  border-top: 2px solid #cfcfcf;
 }
 
 #aside-nav-container {
-  border-top: 2px solid #cfcfcf;
   text-align: center;
   width: 160px;
+
 }
 
 .aside-nav {
-  padding: 20px 15px 10px 15px;
+
+  padding: 0;
   width: 100%;
   text-align: center;
   margin: 0;
+
 }
 
 .aside-nav a {
   font-size: 18px;
   font-weight: bold;
+  color: #000;
 }
 
 .aside-nav li {
   width: 100%;
 }
-.aside-nav li:hover {
-  background: url(../image/icon/right_arrow_16px.png) 95% 50% no-repeat;
+.aside-nav>li:hover {
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
+  background: url(../image/icon/right_arrow_16px.png) 100% 50% no-repeat;
 }
 
 .aside-nav .nav-dropdown-list {
   width: 100px;
-  margin-left: 119px;
+  margin-left: 152px;
   margin-top: -34px;
 }
 
@@ -320,7 +353,16 @@ a:hover {
 .aside-nav .nav-dropdown-list li {
   display: block;
   padding: 10px 0;
-  height: 45px;
+  height: 44px;
+  border-top: 1px solid #cfcfcf;
+  background-color: #fff;
+}
+.aside-nav .nav-dropdown-list li:last-child {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.aside-nav .nav-dropdown-list li:hover{
+  background: url(../image/icon/right_arrow_16px.png) 100% 50% no-repeat;
 }
 
 /*  List Head   */
@@ -344,7 +386,7 @@ a:hover {
 }
 .list li {
   margin: 5px 0;
-  padding: 10px;
+  padding: 10px 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -354,3 +396,45 @@ a:hover {
 .list span {
   float: right;
 }
+
+/*  detail   */
+
+.back {
+  float: right;
+  background: url(../image/icon/left_arrow_16px.png) 0% 50% no-repeat;
+  font-size: 8px;
+}
+
+.back a {
+  color: #a9b2b9;
+}
+
+#detail {
+  float: left;
+}
+
+#detail h2 {
+  font-weight: bold;
+}
+
+#detail-head-container {
+  border-bottom: 2px solid #cfcfcf;
+  padding: 10px;
+}
+
+#detail-head-container a{
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+#detail-content-container {
+  padding: 10px;
+}
+#detail-content-container h3 {
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+}
+
+
+
