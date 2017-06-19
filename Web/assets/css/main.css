@@ -427,15 +427,16 @@ a:hover {
   position: relative;
   margin: 0;
   padding: 5px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   border-bottom: 1px dashed #e5e5e5;
   background: url(../image/icon/right_solid_arrow_16px.png) 0% 50% no-repeat;
 }
 
 .list h3 {
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
 }
 .list h3:hover{
   background-color: #e5e5e5;
