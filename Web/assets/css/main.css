@@ -239,6 +239,25 @@ a:hover {
   vertical-align: text-top;
 }
 
+/* BackToTop  */
+#backtotop {
+  padding: 10px 20px;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  cursor: pointer;
+  text-align: center;
+  z-index: 9999;
+  background-color: #e5e5e5;
+}
+
+#backtotop:hover {
+  background-color: #cfcfcf;
+  text-decoration: underline;
+}
+/*  End of BackToTop  */
+
 /*  Header  */
 
 #header {
@@ -296,6 +315,7 @@ a:hover {
 */
 
 .primary-nav .nav-dropdown-list li {
+  transition: background-color 0.5s;
   background-color: #e5e5e5;
 }
 .primary-nav .nav-dropdown-list li:first-child {
@@ -375,6 +395,7 @@ a:hover {
   height: 43px;
   border-left: 1px solid #e5e5e5;
   background-color: #e5e5e5;
+  transition: background-color 0.5s;
 }
 .aside-nav .nav-dropdown-list li:hover {
   background-color: #cfcfcf
@@ -428,13 +449,19 @@ a:hover {
 /*  detail   */
 
 .back {
-  float: right;
+  position: absolute;
   background: url(../image/icon/left_arrow_16px.png) 0% 50% no-repeat;
   font-size: 8px;
+  left: 90%;
+  top:50%;
 }
 
 .back a {
   color: #a9b2b9;
+}
+
+.back a:hover {
+  text-decoration: underline;
 }
 
 #detail {
@@ -448,6 +475,7 @@ a:hover {
 #detail-head-container {
   border-bottom: 2px solid #cfcfcf;
   padding: 10px;
+  position: relative;
 }
 
 #detail-head-container a{
@@ -462,6 +490,9 @@ a:hover {
   text-align: center;
   font-weight: bold;
   padding: 15px;
+}
+#detail-content-container h5 {
+  text-align-last: center;
 }
 
 
