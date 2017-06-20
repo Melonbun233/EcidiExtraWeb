@@ -99,7 +99,7 @@ div {
   width: 40%;
 }
 .col-7 {
-  width: 46.666666%；
+  width: 46.666666%;
 }
 .col-8 {
   width: 53.333333%;
@@ -169,7 +169,7 @@ h2 {
 
 h3 {
   font-size: 18px;
-  line-height: 34px;px;
+  line-height: 34px;
 }
 
 h4 {
@@ -308,11 +308,6 @@ a:hover {
   background: url(../image/icon/arrow_down_16px.png) 125px 50% no-repeat;
   background-size: auto 6px;
 }
-/*
-.nav-dropdown:hover ul{
-  display: block;
-}
-*/
 
 .primary-nav .nav-dropdown-list li {
   transition: background-color 0.5s;

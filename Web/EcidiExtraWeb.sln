@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EcidiExtraWeb", "http://localhost/EcidiExtraWeb", "{8F18EBA7-4905-4159-9132-CA03827DFDAE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/EcidiExtraWeb"
+		Debug.AspNetCompiler.PhysicalPath = "E:\Github\EcidiExtraWeb\Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\EcidiExtraWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/EcidiExtraWeb"
+		Release.AspNetCompiler.PhysicalPath = "E:\Github\EcidiExtraWeb\Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\EcidiExtraWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "E:\Github\EcidiExtraWeb\Web\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F18EBA7-4905-4159-9132-CA03827DFDAE}.Debug|.NET.ActiveCfg = Debug|.NET
+		{8F18EBA7-4905-4159-9132-CA03827DFDAE}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
