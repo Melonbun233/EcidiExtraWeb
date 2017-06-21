@@ -15,13 +15,11 @@ namespace DBBase
 {
     public class Base
     {
-        #region "全局配置"
         protected static string strConn = ConfigurationManager.AppSettings["strConnection"];
         protected static string strSQL;
         public static string CatalogConfigInfo=ConfigurationManager.AppSettings["CatalogConfigInfo"];
         public static string CatalogInfo=ConfigurationManager.AppSettings["CatalogInfo"];
         public static string siteInfo = ConfigurationManager.AppSettings["siteInfo"];
-        #endregion
 
 
         public static int ExecuteSql(string strSQL)

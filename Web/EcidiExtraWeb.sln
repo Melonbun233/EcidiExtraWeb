@@ -1,9 +1,12 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EcidiExtraWeb", "http://localhost/EcidiExtraWeb", "{8F18EBA7-4905-4159-9132-CA03827DFDAE}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EcidiExtraWeb", "http://localhost/EcidiExtraWeb", "{D7E37365-3CE8-4BE3-9AFC-A33B8A4CC29D}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFramework = "3.5"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		Debug.AspNetCompiler.VirtualPath = "/EcidiExtraWeb"
 		Debug.AspNetCompiler.PhysicalPath = "E:\Github\EcidiExtraWeb\Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\EcidiExtraWeb\"
@@ -23,11 +26,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EcidiExtraWeb", "http://loc
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8F18EBA7-4905-4159-9132-CA03827DFDAE}.Debug|.NET.ActiveCfg = Debug|.NET
-		{8F18EBA7-4905-4159-9132-CA03827DFDAE}.Debug|.NET.Build.0 = Debug|.NET
+		{D7E37365-3CE8-4BE3-9AFC-A33B8A4CC29D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E37365-3CE8-4BE3-9AFC-A33B8A4CC29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

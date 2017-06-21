@@ -149,7 +149,7 @@ div {
     Typography
 */
 
-h1, h2, h3, h4, {
+h1, h2, h3, h4 {
   color: #000;
 }
 
@@ -200,11 +200,8 @@ small {
 a {
   text-decoration: none;
   color: #000;
-
 }
 
-a:hover {
-}
 
 /*  Navagation  */
 
@@ -236,7 +233,6 @@ a:hover {
   padding: 10px 10px;
   display: block;
   background-color: #fff;
-  vertical-align: text-top;
 }
 
 /* BackToTop  */
@@ -290,7 +286,6 @@ a:hover {
   padding: 10px 20px;
   display: inline-block;
   vertical-align: top;
-  float: left;
   width: 140px;
 }  
 
@@ -432,6 +427,7 @@ a:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 80%;
+  transition: background-color 0.5s;
 }
 .list h3:hover{
   background-color: #e5e5e5;

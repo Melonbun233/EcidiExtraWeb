@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="SingleContentPage.master" AutoEventWireup="true" CodeFile="List.master.cs" Inherits="Pages_List" %>
+
+<asp:Content ContentPlaceHolderID="Head" Runat="Server">
+	<asp:ContentPlaceHolder ID="Head" Runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="Section" Runat="Server">
+	<div class="grid clearfix" id="content">
+		<div class="col-4" id="aside">
+			<asp:ContentPlaceHolder Id="Aside" Runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+		<div class="col-11" id="list">
+			<asp:ContentPlaceHolder Id="MainContent" Runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+</asp:Content>
+

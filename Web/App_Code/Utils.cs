@@ -391,14 +391,15 @@ namespace Common
             }
 
 		}
-        #endregion
+		#endregion
 
-        /// <summary>
-        /// 写cookie值
-        /// </summary>
-        /// <param name="strName">名称</param>
-        /// <param name="strValue">值</param>
-        public static void WriteCookie(string strName, string strValue)
+		#region
+		/// <summary>
+		/// 写cookie值
+		/// </summary>
+		/// <param name="strName">名称</param>
+		/// <param name="strValue">值</param>
+		public static void WriteCookie(string strName, string strValue)
         {
             HttpCookie cookie = HttpContext.Current.Request.Cookies[strName];
             if (cookie == null)
@@ -408,13 +409,14 @@ namespace Common
             cookie.Value = strValue;
             HttpContext.Current.Response.AppendCookie(cookie);
         }
+		#endregion
 
-        /// <summary>
-        /// 写cookie值
-        /// </summary>
-        /// <param name="strName">名称</param>
-        /// <param name="strValue">值</param>
-        public static void WriteCookie(string strName, string key, string strValue)
+		/// <summary>
+		/// 写cookie值
+		/// </summary>
+		/// <param name="strName">名称</param>
+		/// <param name="strValue">值</param>
+		public static void WriteCookie(string strName, string key, string strValue)
         {
             HttpCookie cookie = HttpContext.Current.Request.Cookies[strName];
             if (cookie == null)
