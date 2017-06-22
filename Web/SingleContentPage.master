@@ -1,14 +1,15 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SingleContentPage.master.cs" Inherits="EcidiExtraWeb" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SingleContentPage.master.cs" Inherits="SingleContentPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <asp:ContentPlaceHolder id="Head" runat="server">
+	<asp:ContentPlaceHolder id="Head" runat="server">
     </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href=<%=ResolveClientUrl("~/assets/css/main.css") %>>
+    <script type="text/javascript" src=<%=ResolveClientUrl("~/assets/js/jquery.js") %>></script>
+	<title id="MasterTitle" runat="server"></title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -55,8 +56,8 @@
 					<ul class="nav-dropdown-list">
 						<li><a href="#">理念</a></li>
 						<li><a href="#">党工团建设</a></li>
-						<li><a href="#">团队故事</a></li>
-						<li><a href="#">员工风采</a></li>
+						<li><a href="list.aspx?cid=1">团队故事</a></li>
+						<li><a href="list.aspx?cid=2">员工风采</a></li>
 						<li><a href="#">社会责任</a></li>
 					</ul>
 				</li>

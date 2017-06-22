@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="SingleContentPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Pages_Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="SingleContentPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Pages_Default" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="Head" Runat="Server">
 	<title>华东咨询外部网站</title>

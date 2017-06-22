@@ -6,9 +6,17 @@
 	{
 		string path = Server.MapPath("~/count.txt");
 		System.IO.StreamReader strReader = new System.IO.StreamReader(path);
+		int visitedNum;
+		try
+		{
+			string str = strReader.ReadLine();
+			visitedNum = Int32.Parse(str);
+		}
+		catch (ArgumentNullException)
+		{
+			visitedNum = 0;
+		}
 
-		string str = strReader.ReadLine();
-		int visitedNum = Int32.Parse(str);
 		strReader.Close();
 
 		// set current user number

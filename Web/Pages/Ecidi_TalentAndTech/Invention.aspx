@@ -1,11 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="List.master" AutoEventWireup="true" CodeFile="Invention.aspx.cs" Inherits="Pages_Tech_and_Talent_Innovation_Invention" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../../List.master" AutoEventWireup="true" CodeFile="Invention.aspx.cs" Inherits="Pages_Ecidi_Tech_and_Talent_Invention" %>
+<%@ MasterType VirtualPath="~/List.master" %>
 
 <asp:Content ContentPlaceHolderID="Head" Runat="Server">
-    <title>科技创新</title>
+	<title>发明</title>
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="Aside" Runat="Server">
-		<!-- Aside	-->
+		<%=AsideNavigation %>
+		<!-- Aside	
 		<div id="aside-nav-container">
 			<ul class="nav aside-nav">
 				<li><a href="#">项目经理<br>（总监团队）</a></li>

@@ -4,6 +4,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Configuration;
 using System.Web;
+using Common;
 
 namespace Common
 {
@@ -470,5 +471,5 @@ namespace Common
 
             return "";
         }
-    }
+	}
 }

@@ -7,8 +7,13 @@ using System.Web.UI.WebControls;
 
 public partial class Pages_List : System.Web.UI.MasterPage
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
+	public string test;
+	protected void Page_Load(object sender, EventArgs e)
+	{
+	}
 
-    }
+	
+
+
 }
+

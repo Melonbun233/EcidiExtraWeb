@@ -8,18 +8,25 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
+using Common;
 /// <summary>
 /// Class1 的摘要说明
 /// </summary>
-namespace DBBase
+namespace Common
 {
     public class Base
     {
+
         protected static string strConn = ConfigurationManager.AppSettings["strConnection"];
         protected static string strSQL;
-        public static string CatalogConfigInfo=ConfigurationManager.AppSettings["CatalogConfigInfo"];
-        public static string CatalogInfo=ConfigurationManager.AppSettings["CatalogInfo"];
-        public static string siteInfo = ConfigurationManager.AppSettings["siteInfo"];
+        public static string ArticleCategory = ConfigurationManager.AppSettings["ArticleCategory"];
+		public static string ChannelCategory = ConfigurationManager.AppSettings["Channelcategory"];
+		public static string AboutUsInfo = ConfigurationManager.AppSettings["AboutUsInfo"];
+		public static string CompanyCultureInfo = ConfigurationManager.AppSettings["CompanyCultureInfo"];
+		public static string MarketAndBusinessInfo = ConfigurationManager.AppSettings["MarketAndBusinessInfo"];
+		public static string NewsInfo = ConfigurationManager.AppSettings["NewsInfo"];
+		public static string TalentAndTechInfo = ConfigurationManager.AppSettings["TalentAndTechInfo"];
+        public static string SiteName = ConfigurationManager.AppSettings["SiteName"];
 
 
         public static int ExecuteSql(string strSQL)
@@ -143,7 +150,7 @@ namespace DBBase
                 myCn.Close();
             }
         }
-        public static string ExecuteSql4string(string strSQL)
+        public static string ExecuteSql4String(string strSQL)
         {
             SqlConnection myCn = new SqlConnection(strConn);
             SqlCommand myCmd = new SqlCommand(strSQL, myCn);
