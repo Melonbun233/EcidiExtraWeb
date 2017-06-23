@@ -19,13 +19,14 @@ namespace Common
 
         protected static string strConn = ConfigurationManager.AppSettings["strConnection"];
         protected static string strSQL;
+		public static string Article = ConfigurationManager.AppSettings["Article"];
         public static string ArticleCategory = ConfigurationManager.AppSettings["ArticleCategory"];
 		public static string ChannelCategory = ConfigurationManager.AppSettings["Channelcategory"];
-		public static string AboutUsInfo = ConfigurationManager.AppSettings["AboutUsInfo"];
-		public static string CompanyCultureInfo = ConfigurationManager.AppSettings["CompanyCultureInfo"];
-		public static string MarketAndBusinessInfo = ConfigurationManager.AppSettings["MarketAndBusinessInfo"];
-		public static string NewsInfo = ConfigurationManager.AppSettings["NewsInfo"];
-		public static string TalentAndTechInfo = ConfigurationManager.AppSettings["TalentAndTechInfo"];
+		public static string Ecidi_AboutUsInfo = ConfigurationManager.AppSettings["AboutUsInfo"];
+		public static string Ecidi_CompanyCultureInfo = ConfigurationManager.AppSettings["CompanyCultureInfo"];
+		public static string Ecidi_MarketAndBusinessInfo = ConfigurationManager.AppSettings["MarketAndBusinessInfo"];
+		public static string Ecidi_NewsInfo = ConfigurationManager.AppSettings["NewsInfo"];
+		public static string Ecidi_TalentAndTechInfo = ConfigurationManager.AppSettings["TalentAndTechInfo"];
         public static string SiteName = ConfigurationManager.AppSettings["SiteName"];
 
 

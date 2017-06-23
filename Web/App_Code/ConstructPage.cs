@@ -13,41 +13,48 @@ namespace Common
 {
 	public class ConstructPage
 	{
-		/// <summary>Get channel ID by channel title</summary>
-		/// <param name="channelTitle"> This should be Chinese channel name/title</param>
-		/// <returns int>channel ID</returns>
-		public static int GetChannelId(string channelTitle)
-		{
-			string strSQL = "select id from " + Base.ArticleCategory + " where title = '" + channelTitle +"'";
-			int channelId = Base.ExecuteSql4Value(strSQL);
-			return channelId;
-		}
 
-		///<summary>Get channel Name by channel id</summary>
-		///<param name="channelId"
-		///
-		public static string GetChannelName(int channelId)
-		{
-			string strSQL = "select name from " + Base.ChannelCategory + " where id = " + channelId;
-			string channelName = Base.ExecuteSql4String(strSQL);
-			return channelName;
-		}
 
 		/// <summary>Construct an aside navigation using HTML tags</summary>
 		/// <param name="channelId">ID of the channel used to construct aside navigation</param>
-		/// <param name="channelName">This should be English channel name</param>
 		/// <returns>Set of HTML tags of the aside navigation</returns>
-
-		public static string GetAsideNav(string channelName, int channelId	)
+		public static string ConstructAsideNav(int channelId)
 		{
-			string html = "";
+			string channelName = Utils.GetChannelName(channelId);
 			string strSQL = "select id, title, call_index, parent_id, class_list, class_layer from " + Base.ArticleCategory + " where channel_id = " + channelId;
 			DataTable dt = Base.ExecuteSql4Dt(strSQL);
 			Node asideNav = ConstructTree(dt, channelName);     //construct a tree
-			html = Node.ConstructNavHtml(asideNav);
+			string html = Node.ConstructNavHtml(asideNav);
 
 			return html; 
 		}
+
+		/// <summary>
+		/// Construct a URL that has unique query string for a list page
+		/// </summary>
+		/// <param name="articleCateId">ID of article category</param>
+		/// <returns></returns>
+		public static string ConstructListURL(int articleCateId)
+		{
+			string url;
+			string strSQL = "select channel_id, call_index from " + Base.ArticleCategory + " where id = " + articleCateId;
+			DataTable dt = Base.ExecuteSql4Dt(strSQL);
+
+			string channelId = dt.Rows[0][0].ToString();
+			string articleCateName = dt.Rows[0][1].ToString();
+
+			url = "list.aspx?articleCateId=" + articleCateId + "&channelId=" + channelId + "&articleCateName=" + articleCateName;
+			
+			return url;
+		}
+
+		/// <summary>
+		///  Construct a URL that has unique query string for a detail page
+		/// </summary>
+		/// <param ></param>
+		/// <param></param>
+		/// <returns></returns>
+		
 
 		private static Node ConstructTree(DataTable dt, string channelName)
 		{

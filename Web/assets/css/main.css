@@ -216,7 +216,7 @@ a {
 }
 
 .nav-dropdown {
-  position: relative;
+	cursor:default;
 }
 .nav-dropdown-list {
   display: none;
@@ -226,7 +226,6 @@ a {
 
 .nav-dropdown-list a {
   font-size: 18px;
-
 }
 
 .nav-dropdown-list li {
@@ -236,6 +235,10 @@ a {
 }
 
 /* BackToTop  */
+
+#aspnetForm {
+	position: relative;
+}
 #backtotop {
   padding: 10px 20px;
   display: none;
@@ -282,13 +285,17 @@ a {
   padding: 0;
   float: right;
 }
+
+
 .primary-nav>li {
-  padding: 10px 20px;
+  padding: 15px 20px;
   display: inline-block;
   vertical-align: top;
   width: 140px;
 }  
-
+.primary-nav>li>a {
+	font-size: 20px;
+}
 .primary-nav>li:hover {
   background-color: #e5e5e5; 
 }
@@ -302,6 +309,7 @@ a {
 .primary-nav .nav-dropdown {
   background: url(../image/icon/arrow_down_16px.png) 125px 50% no-repeat;
   background-size: auto 6px;
+  position: relative;
 }
 
 .primary-nav .nav-dropdown-list li {
@@ -331,29 +339,55 @@ a {
   padding: 20px 0;
 }
 
+/* pagebar	*/
+
+.anpager {
+	padding: 20px 0 0 10px;
+	transition: all 0.5s;
+}
+.anpager .cpb {
+	background: #e5e5e5 none repeat scroll 0 0;
+	color: #000;
+	margin: 2px;
+	padding: 3px 10px;
+}
+
+.anpager a {
+	background: #FFFFFF none repeat scroll 0 0;
+	color: #000;
+	margin: 2px;
+	padding: 3px 10px;
+	text-decoration: none
+}
+
+.anpager a:hover {
+	background: #e5e5e5 none repeat scroll 0 0;
+	color: #808080;
+}
 
 /*  Aside Navagation  */
-
 #aside {
-  float: left;
+	float: left;
 }
 
 #aside-nav-container {
   text-align: center;
   width: 150px;
-  position: relative;
 }
 
 .aside-nav {
-  padding: 10px 0;
-  width: 140px;
-  text-align: center;
-  margin: 0;
+	padding: 0;
+	width: 150px;
+	text-align: center;
+	margin: 0;
+	position: relative;
 }
 
 .aside-nav a {
   font-size: 18px;
   color: #000;
+  display: block;
+  padding: 0px 20px;
 }
 
 .aside-nav>li {
@@ -361,7 +395,7 @@ a {
 }
 .aside-nav li {
   width: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 .aside-nav>li:hover {
   background-color: #e5e5e5;
@@ -370,26 +404,42 @@ a {
 .aside-nav .nav-dropdown {
   background: url(../image/icon/arrow_right_16px.png) 90% 50% no-repeat;
   background-size: 6px auto;
+
 }
+
 .aside-nav .nav-dropdown-list {
+  height:100%;
+  position: absolute;
   width: 130px;
   left: 100%;
   top: 0%;
+  background-color: #e5e5e5;
 }
 
 .aside-nav .nav-dropdown-list a {
-  font-size: 16px;
+  font-size: 18px;
 }
 .aside-nav .nav-dropdown-list li {
-  padding: 10px 0;
-  height: 43px;
+  height: auto;
   border-left: 1px solid #e5e5e5;
   background-color: #e5e5e5;
   transition: background-color 0.5s;
 }
 .aside-nav .nav-dropdown-list li:hover {
-  background-color: #cfcfcf
+  background-color: #cfcfcf;
 }
+
+.aside-nav>.nav-dropdown .nav-dropdown-list {
+	background-color: #e5e5e5;
+}
+.aside-nav>.nav-dropdown .nav-dropdown li {
+	background-color: #cfcfcf;
+}
+
+.aside-nav>.nav-dropdown .nav-dropdown li:hover {
+	background-color: #ababab;
+}
+
 
 /*  List Head   */
 

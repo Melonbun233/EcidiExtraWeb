@@ -25,40 +25,40 @@
 		</div>
 		<div class="fluid-container clearfix" id="menu">
 			<ul class="nav primary-nav container">
-				<li><a href="Home.aspx">首页</a></li><!--
-				--><li class="nav-dropdown"><a href="#">关于我们</a>
+				<li><a href="Default.aspx">首页</a></li><!--
+				--><li class="nav-dropdown"><a>关于我们</a>
 					<ul class="nav-dropdown-list">
-						<li><a href="#">公司简介</a></li>
-						<li><a href="#">组织机构</a></li>
-						<li><a href="#">资质</a></li>
-						<li><a href="#">荣誉</a></li>
+						<li><a href="<%=introUrl %>">公司简介</a></li>
+						<li><a href="<%=organizationUrl %>">组织机构</a></li>
+						<li><a href="<%=certificationUrl %>">资质</a></li>
+						<li><a href="<%=honorUrl %>">荣誉</a></li>
 					</ul>
 				</li><!--
-				--><li class="nav-dropdown"><a href="#">人才与科技</a>
+				--><li class="nav-dropdown"><a>人才与科技</a>
 					<ul class="nav-dropdown-list">
-						<li><a href="#">项目经理<br>（总监）团队</a></li>
-						<li><a href="#">专家团队</a></li>
-						<li><a href="#">人才培养</a></li>
-						<li><a href="#">科技创新</a></li>
-						<li><a href="#">招贤纳士</a></li>
+						<li><a href="<%=managerUrl%>"">项目经理<br>（总监）团队</a></li>
+						<li><a href="<%=proUrl %>">专家团队</a></li>
+						<li><a href="<%=trainUrl%>">人才培养</a></li>
+						<li><a href="<%=innovationUrl %>">科技创新</a></li>
+						<li><a href="<%=recruitUrl %>">招贤纳士</a></li>
 					</ul>
 				</li><!--
-				--><li class="nav-dropdown"><a href="#">市场与业务</a>
+				--><li class="nav-dropdown"><a>市场与业务</a>
 					<ul class="nav-dropdown-list">
-						<li><a href="#">监理</a></li>
-						<li><a href="#">招标代理</a></li>
-						<li><a href="#">工程总承包</a></li>
-						<li><a href="#">项目管理与<br>工程代建</a></li>
+						<li><a href="<%=supervisionUrl %>">监理</a></li>
+						<li><a href="<%=biddingUrl %>">招标代理</a></li>
+						<li><a href="<%=contractingUrl %>">工程总承包</a></li>
+						<li><a href="<%=agentUrl %>">项目管理与<br>工程代建</a></li>
 					</ul>
 				</li><!--
-				--><li><a href="#">新闻中心</a></li><!--
-				--><li class="nav-dropdown"><a href="#">企业文化</a>
+				--><li><a href="<%=newsUrl %>">新闻中心</a></li><!--
+				--><li class="nav-dropdown"><a>企业文化</a>
 					<ul class="nav-dropdown-list">
-						<li><a href="#">理念</a></li>
-						<li><a href="#">党工团建设</a></li>
-						<li><a href="list.aspx?cid=1">团队故事</a></li>
-						<li><a href="list.aspx?cid=2">员工风采</a></li>
-						<li><a href="#">社会责任</a></li>
+						<li><a href="<%=conceptUrl %>">理念</a></li>
+						<li><a href="<%=partyUrl %>">党工团建设</a></li>
+						<li><a href="<%=teamStoryUrl %>">团队故事</a></li>
+						<li><a href="<%=staffStoryUrl %>">员工风采</a></li>
+						<li><a href="<%=responsibilityUrl %>">社会责任</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -84,6 +84,12 @@
 	</div>
 	<!-- End of Footer -->
 
+	<!-- BackToTop 	-->
+	<div id="backtotop">
+		<h4>返回<br>顶部</h4>
+	</div>
+	<!-- End of BackToTop 	-->
+
 	<!--	JavaScript 	  -->
 
 <!--[if IE]>
@@ -97,16 +103,30 @@
 	</script>
 <![endif]-->
 
-<!--[if !IE]><!-->
 	<script type="text/javascript">
 		$(".nav-dropdown").hover(
 			function(){
-				$(this).find(".nav-dropdown-list").fadeIn(400);}
-			,function(){
-				$(this).find(".nav-dropdown-list").fadeOut(100);}
+				$(this).find(">.nav-dropdown-list").fadeIn(400);}
+			,function(){ 
+				$(this).find(">.nav-dropdown-list").fadeOut(100);}
 			);
 	</script>
-<!--<![endif]-->
+
+	<script type="text/javascript">
+		$(function () {
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 100) {
+					$('#backtotop').fadeIn(400);
+				} else {
+					$('#backtotop').hide();
+				}
+			});
+			$('#backtotop').click(function () {
+				$('html, body').animate({ scrollTop: 0 }, 400);
+			});
+		});
+
+	</script>
 
 	<!-- 	End of JavaScript 	-->
    

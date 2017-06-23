@@ -471,5 +471,32 @@ namespace Common
 
             return "";
         }
+
+		/// <summary>Get channel ID by channel title</summary>
+		/// <param name="articleCateId">/title</param>
+		/// <returns>article category title</returns>
+		public static string GetArticleCateTitle(int articleCateId)
+		{
+			string strSQL = "select title from " + Base.ArticleCategory + " where id = " + articleCateId;
+			string articleCateTitle = Base.ExecuteSql4String(strSQL);
+			return articleCateTitle;
+		}
+
+		///<summary>Get channel Name by channel id</summary>
+		///<param name="channelId">Channel ID</param>
+		///<return>Channel name in English</return>
+		public static string GetChannelName(int channelId)
+		{
+			string strSQL = "select name from " + Base.ChannelCategory + " where id = " + channelId;
+			string channelName = Base.ExecuteSql4String(strSQL);
+			return channelName;
+		}
+
+		public static string GetArticleTitle(int articleId)
+		{
+			string strSQL = "select title from " + Base.Article + " where id =" + articleId;
+			string articleTitle = Base.ExecuteSql4String(strSQL);
+			return articleTitle;
+		}
 	}
 }

@@ -16,7 +16,7 @@ namespace Common
 		private string title;
 		private string callIndex;
 		private Node parent;
-		private List<Node> children; 
+		private List<Node> children = new List<Node>(); 
 
 		public Node() { }
 
@@ -83,23 +83,28 @@ namespace Common
 		public static string ConstructNavHtml(Node node)
 		{
 			string html = "<div id='aside-nav-container'><ul class='nav aside-nav'>";
-			html += ConstructNavHtml(html, node);
+			foreach (Node child in node.GetChildren())
+			{
+				html = ConstructNavHtml(html, child);
+			}
+
 			html += "</ul></div>";
 			return html;
 		}
 		private static string ConstructNavHtml(string html, Node node)
 		{
-			if(node.GetChildren() != null)		//NOT leaf nod
+			if(node.GetChildren().Count != 0)		//NOT leaf nod
 			{
-				html += "<li class='nav-dropdown'><a href='../" + node.GetChannelName() + node.GetCallIndex() + ".aspx'" + node.GetTitle() + "</a>";
+				html += "<li class='nav-dropdown'><a>" + node.GetTitle() + "</a>" + "<ul class='nav-dropdown-list'>";
 				foreach(Node child in node.GetChildren())
 				{
-					html += ConstructNavHtml(html, child);
+					html = ConstructNavHtml(html, child);
 				}
-				html += "</li>";
+				html += "</ul></li>";
 			} else								//leaf node
 			{
-				html += "<li><a href ='../" + node.GetChannelName() + node.GetCallIndex() + ".aspx'" + node.GetTitle() + "</a></li>";
+				string url = ConstructPage.ConstructListURL(node.GetId());
+				html += "<li><a href ='" + url +"'>" + node.GetTitle() + "</a></li>";
 			}
 			return html;
 		}
