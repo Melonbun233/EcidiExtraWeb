@@ -4,12 +4,12 @@
 
 <html>
 <head runat="server">
-	<asp:ContentPlaceHolder id="Head" runat="server">
-    </asp:ContentPlaceHolder>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href=<%=ResolveClientUrl("~/assets/css/main.css") %>>
     <script type="text/javascript" src=<%=ResolveClientUrl("~/assets/js/jquery.js") %>></script>
-	<title id="MasterTitle" runat="server"></title>
+	<asp:ContentPlaceHolder id="Head" runat="server">
+    </asp:ContentPlaceHolder>
+	<title></title>
 </head>
 <body>
     <form id="form1" runat="server">

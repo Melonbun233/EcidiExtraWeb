@@ -34,9 +34,14 @@ public partial class List : System.Web.UI.Page
 			channelViewName = ConfigurationManager.AppSettings[channelName + "Info"];
 			asideNavHtml = ConstructPage.ConstructAsideNav(channelId);
 
-			BindData();
+
 
 		}
+	}
+
+	protected void Page_PreRender(object sender, EventArgs e)
+	{
+		BindData();
 	}
 
 	protected void BindData()

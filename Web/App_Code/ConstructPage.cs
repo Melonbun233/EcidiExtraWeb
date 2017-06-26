@@ -48,6 +48,20 @@ namespace Common
 			return url;
 		}
 
+		public static string ConstructDetailURL(int articleId)
+		{
+			string url;
+			string strSQL = "select channel_id, category_id from " + Base.ArticleInfo + " where id = " + articleId;
+			DataTable dt = Base.ExecuteSql4Dt(strSQL);
+
+			string channelId = dt.Rows[0][0].ToString();
+			string categoryId = dt.Rows[0][1].ToString();
+
+			url = "detail.aspx?articleId=" + articleId + "&channelId=" + channelId + "&articleCateId=" + categoryId;
+
+			return url;
+		}
+
 		/// <summary>
 		///  Construct a URL that has unique query string for a detail page
 		/// </summary>

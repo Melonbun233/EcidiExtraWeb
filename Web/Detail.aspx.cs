@@ -35,7 +35,7 @@ public partial class Detail : System.Web.UI.Page
 
 	protected void GetArticle()
 	{
-		string strSQL = "select * from " + Base.Article + " where id =" + articleId;
+		string strSQL = "select * from " + Base.ArticleInfo + " where id =" + articleId;
 		DataTable dt = Base.ExecuteSql4Dt(strSQL);
 		if (dt.Rows.Count != 0)
 		{

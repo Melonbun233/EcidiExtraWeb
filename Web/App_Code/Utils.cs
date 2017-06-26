@@ -494,7 +494,7 @@ namespace Common
 
 		public static string GetArticleTitle(int articleId)
 		{
-			string strSQL = "select title from " + Base.Article + " where id =" + articleId;
+			string strSQL = "select title from " + Base.ArticleInfo + " where id =" + articleId;
 			string articleTitle = Base.ExecuteSql4String(strSQL);
 			return articleTitle;
 		}
