@@ -26,6 +26,7 @@ public partial class List : System.Web.UI.Page
 	{
 		if (!IsPostBack)
 		{
+			Common.SqlIn.StartProcessRequest();
 			articleCateId = Int32.Parse(Request.QueryString["articleCateId"].ToString());
 			articleCateName = Request.QueryString["articleCateName"];
 			channelId = Int32.Parse(Request.QueryString["channelId"].ToString());

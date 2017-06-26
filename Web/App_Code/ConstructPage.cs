@@ -48,6 +48,11 @@ namespace Common
 			return url;
 		}
 
+		/// <summary>
+		/// Construct a Url that has unique query string for a detail page
+		/// </summary>
+		/// <param name="articleId">ID of the article</param>
+		/// <returns></returns>
 		public static string ConstructDetailURL(int articleId)
 		{
 			string url;
@@ -62,13 +67,6 @@ namespace Common
 			return url;
 		}
 
-		/// <summary>
-		///  Construct a URL that has unique query string for a detail page
-		/// </summary>
-		/// <param ></param>
-		/// <param></param>
-		/// <returns></returns>
-		
 
 		private static Node ConstructTree(DataTable dt, string channelName)
 		{

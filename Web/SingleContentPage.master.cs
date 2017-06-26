@@ -56,7 +56,7 @@ public partial class SingleContentPage : System.Web.UI.MasterPage
 		supervisionUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["Supervision"]));
 		biddingUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["BiddingAgent"]));
 		contractingUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["ProjectContracting"]));
-		agentUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["ProjectManagementAndAgentConstruction"]));
+		agentUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["ProjectManagementAgentConstruction"]));
 		newsUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["News"]));
 		conceptUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["Concept"]));
 		partyUrl = ConstructPage.ConstructListURL( Int32.Parse(ConfigurationManager.AppSettings["PartyConstruction"]));

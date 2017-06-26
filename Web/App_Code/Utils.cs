@@ -484,7 +484,7 @@ namespace Common
 
 		///<summary>Get channel Name by channel id</summary>
 		///<param name="channelId">Channel ID</param>
-		///<return>Channel name in English</return>
+		///<return>Channel name(English)</return>
 		public static string GetChannelName(int channelId)
 		{
 			string strSQL = "select name from " + Base.ChannelCategory + " where id = " + channelId;
@@ -492,6 +492,11 @@ namespace Common
 			return channelName;
 		}
 
+		/// <summary>
+		/// Get the article title (Chinese) for a specific article ID 
+		/// </summary>
+		/// <param name="articleId"> id of the article</param>
+		/// <returns>article title(Chinese)</returns>
 		public static string GetArticleTitle(int articleId)
 		{
 			string strSQL = "select title from " + Base.ArticleInfo + " where id =" + articleId;

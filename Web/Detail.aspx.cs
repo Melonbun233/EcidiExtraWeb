@@ -23,6 +23,7 @@ public partial class Detail : System.Web.UI.Page
 	{
 		if (!IsPostBack)
 		{
+			Common.SqlIn.StartProcessRequest();
 			articleId = Int32.Parse(Request.QueryString["articleId"].ToString());
 			channelId = Int32.Parse(Request.QueryString["channelId"].ToString());
 			articleCateId = Int32.Parse(Request.QueryString["articleCateId"].ToString());

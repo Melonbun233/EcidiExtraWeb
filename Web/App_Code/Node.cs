@@ -80,6 +80,11 @@ namespace Common
 			return channelName;
 		}
 
+		/// <summary>
+		/// Construct html code which is an aside navigation
+		/// </summary>
+		/// <param name="node">the start node that contains all article categories</param>
+		/// <returns></returns>
 		public static string ConstructNavHtml(Node node)
 		{
 			string html = "<div id='aside-nav-container'><ul class='nav aside-nav'>";
@@ -93,19 +98,34 @@ namespace Common
 		}
 		private static string ConstructNavHtml(string html, Node node)
 		{
-			if(node.GetChildren().Count != 0)		//NOT leaf nod
-			{
-				html += "<li class='nav-dropdown'><a>" + node.GetTitle() + "</a>" + "<ul class='nav-dropdown-list'>";
-				foreach(Node child in node.GetChildren())
-				{
-					html = ConstructNavHtml(html, child);
-				}
-				html += "</ul></li>";
-			} else								//leaf node
-			{
+			if (node.GetCallIndex() == "ManagerTeam")	// 在这里可以选择特殊标题 更改其url为某一个特定的值
+			{		// ManagerTeam is a leaf node
 				string url = ConstructPage.ConstructListURL(node.GetId());
-				html += "<li><a href ='" + url +"'>" + node.GetTitle() + "</a></li>";
+				html += "<li><a href ='" + url + "'>项目经理<br>（总监）团队</a></li>";		// 在此处更改url
+			} 
+			else if(node.GetCallIndex() == "ProjectManagementAgentConstruction")
+			{		// a leaf node
+				string url = ConstructPage.ConstructListURL(node.GetId());
+				html += "<li><a href ='" + url + "'>工程管理<br>与工程代建</a></li>";       // 在此处更改url
 			}
+			else
+			{
+				if (node.GetChildren().Count != 0)      //NOT leaf nod
+				{
+					html += "<li class='nav-dropdown'><a>" + node.GetTitle() + "</a>" + "<ul class='nav-dropdown-list'>";
+					foreach (Node child in node.GetChildren())
+					{
+						html = ConstructNavHtml(html, child);
+					}
+					html += "</ul></li>";
+				}
+				else                                //leaf node
+				{
+					string url = ConstructPage.ConstructListURL(node.GetId());
+					html += "<li><a href ='" + url + "'>" + node.GetTitle() + "</a></li>";
+				}
+			}
+
 			return html;
 		}
 	}

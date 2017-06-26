@@ -3,14 +3,12 @@
 <asp:Content ID="head" ContentPlaceHolderID="Head" Runat="Server">
 	<title>华东咨询外部网站</title>
 	<script type="text/javascript" src=<%=ResolveClientUrl("~/assets/js/myfocus-2.0.4.min.js") %>></script>
-	<script type="text/javascript" src=<%=ResolveClientUrl("~/assets/js/mf-pattern/mF_kdui.js")%>></script>
-	<link rel="stylesheet" type="text/css" href=<%=ResolveClientUrl("~/assets/js/mf-pattern/mF_kdui.css") %>>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
 			if ($("#boxID").find("li").length > 0) {
 				myFocus.set({
-					pattern: 'mF_kdui',
+					pattern: 'mF_fancy',
 					id: 'boxID',
 					time: 5,
 					trigger: 'click',
